@@ -1,10 +1,12 @@
 
-var m = 40
+var m = 0
 	ms = 1
 	sh1 = 48
 	sh2 = 52
 
 function showmenu() {
+	var elem = document.getElementById('score')	
+	elem.innerHTML = 'MONEY: ' + m
 	document.getElementById('menu').style.display = 'block';
 	document.getElementById('start').style.display = 'none';
 	document.getElementById('market').style.display = 'none';
@@ -13,6 +15,8 @@ function showmenu() {
 }
 
 function showgame() {
+	var elem = document.getElementById('score')	
+	elem.innerHTML = 'MONEY: ' + m
 	document.getElementById('start').style.display = 'block';
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'GAME';
@@ -20,6 +24,8 @@ function showgame() {
 }
 
 function showmarket() {
+	var elem = document.getElementById('score')	
+	elem.innerHTML = 'MONEY: ' + m
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('status').innerHTML = 'STATUS: NONE';
 	document.getElementById('market').style.display = 'block'
@@ -54,9 +60,9 @@ function show_money() {
 	}
 	else {
 		money3()
-		ms++
+		m = m + ms
 		var elem = document.getElementById('score')
-		m = ms + ms
+		
 		elem.innerHTML = 'MONEY: ' + m
 	}
 
