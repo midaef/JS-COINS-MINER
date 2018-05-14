@@ -1,5 +1,8 @@
 
-var m = 0
+var m = 40
+	ms = 1
+	sh1 = 48
+	sh2 = 52
 
 function showmenu() {
 	document.getElementById('menu').style.display = 'block';
@@ -18,25 +21,42 @@ function showgame() {
 
 function showmarket() {
 	document.getElementById('menu').style.display = 'none';
+	document.getElementById('status').innerHTML = 'STATUS: NONE';
 	document.getElementById('market').style.display = 'block'
 	document.getElementById('start_label').innerHTML = 'MARKETPLACE';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
+	document.getElementById('plus')
+}
 
-
+function moneyplus() {
+	element = document.getElementById('plus')
+	if (m >= 30) {
+		ms = ms + 1
+		m = m - 30
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: You bought improved!'
+		var elem1 = document.getElementById('score')
+		elem1.innerHTML = 'MONEY: ' + m
+	}
+	else {
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: Not enough money!'
+	}
 }
 
 function show_money() {
 	var c = getRandomInt(1,100);
-	if (c < 48) {
+	if (c < sh1) {
 		money1()
 	}
-	else if ( c > 52) {
+	else if ( c > sh2) {
 		money2()
 	}
 	else {
 		money3()
-		m++
+		ms++
 		var elem = document.getElementById('score')
+		m = ms + ms
 		elem.innerHTML = 'MONEY: ' + m
 	}
 
@@ -60,4 +80,3 @@ function money3() {
 	element = document.getElementById('money')
 	element.setAttribute('src', 'img/reb.png')
 }
-

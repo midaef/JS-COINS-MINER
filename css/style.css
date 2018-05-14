@@ -88,10 +88,18 @@ h3 {
 
 #market {
 	background-color: #f0f8ff;
-	width: 270px;
-	height: 270px;
+	width: 400px;
+	height: 300px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
 	display: none;
+}
+
+#status {
+	padding-top: 0;
+}
+
+#score {
+	padding-top: 0;
 }
