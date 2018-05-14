@@ -85,3 +85,13 @@ h3 {
 #exit {
 	text-align: center;
 }
+
+#market {
+	background-color: #f0f8ff;
+	width: 270px;
+	height: 270px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+	display: none;
+}

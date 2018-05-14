@@ -4,6 +4,7 @@ var m = 0
 function showmenu() {
 	document.getElementById('menu').style.display = 'block';
 	document.getElementById('start').style.display = 'none';
+	document.getElementById('market').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'MENU';
 	document.getElementById('exit').innerHTML = '';
 }
@@ -13,6 +14,15 @@ function showgame() {
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'GAME';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
+}
+
+function showmarket() {
+	document.getElementById('menu').style.display = 'none';
+	document.getElementById('market').style.display = 'block'
+	document.getElementById('start_label').innerHTML = 'MARKETPLACE';
+	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
+
+
 }
 
 function show_money() {
