@@ -103,3 +103,27 @@ h3 {
 #score {
 	padding-top: 0;
 }
+
+#about {
+	display: none;
+	background-color: #f0f8ff;
+	width: 420px;
+	height: 300px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+}
+
+#abouth {
+	padding-top: 0;
+	padding: 10px;
+}
+
+#abouth3 {
+	padding-top: 20px;
+}
+
+#f {
+	color: black;
+	font-size: 20px;
+}

@@ -4,34 +4,47 @@ var m = 0
 	sh1 = 48
 	sh2 = 52
 
+
 function showmenu() {
 	var elem = document.getElementById('score')	
-	elem.innerHTML = 'MONEY: ' + m
+	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('menu').style.display = 'block';
+	document.getElementById('about').style.display = 'none';
 	document.getElementById('start').style.display = 'none';
 	document.getElementById('market').style.display = 'none';
-	document.getElementById('start_label').innerHTML = 'MENU';
+	document.getElementById('start_label').innerHTML = 'COINS MINER';
 	document.getElementById('exit').innerHTML = '';
 }
 
 function showgame() {
 	var elem = document.getElementById('score')	
-	elem.innerHTML = 'MONEY: ' + m
+	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('start').style.display = 'block';
 	document.getElementById('menu').style.display = 'none';
+	document.getElementById('about').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'GAME';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
 }
 
 function showmarket() {
 	var elem = document.getElementById('score')	
-	elem.innerHTML = 'MONEY: ' + m
+	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('status').innerHTML = 'STATUS: NONE';
 	document.getElementById('market').style.display = 'block'
+	document.getElementById('about').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'MARKETPLACE';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
-	document.getElementById('plus')
+	document.getElementById('plus');
+}
+
+function about() {
+	var elem = document.getElementById('score')	
+	elem.innerHTML = 'MONEY: ' + m;
+	document.getElementById('about').style.display = 'block';
+	document.getElementById('menu').style.display = 'none';
+	document.getElementById('start_label').innerHTML = 'ABOUT';
+	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
 }
 
 function moneyplus() {
