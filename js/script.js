@@ -47,11 +47,62 @@ function about() {
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
 }
 
+function shplus() {
+	element = document.getElementById('plus1')
+	if (m >= 35) {
+		sh1 = sh1 - 1;
+		sh2 = sh2 + 1;
+		m = m - 35;
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: You bought improved!'
+		var elem1 = document.getElementById('score')
+		elem1.innerHTML = 'MONEY: ' + m
+	}
+	else {
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: Not enough money!'
+	}
+}
+
+function moneyplus1() {
+	element = document.getElementById('plus2')
+	if (m >= 55) {
+		ms = ms + 3;
+		m = m - 55;
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: You bought improved!'
+		var elem1 = document.getElementById('score')
+		elem1.innerHTML = 'MONEY: ' + m
+	}
+	else {
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: Not enough money!'
+	}
+}
+
+function moneyplus2() {
+	element = document.getElementById('plus3')
+	if (m >= 100) {
+		ms = ms + 4;
+		m = m - 100;
+		sh1 = sh1 - 2;
+		sh2 = sh2 + 2;
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: You bought improved!'
+		var elem1 = document.getElementById('score')
+		elem1.innerHTML = 'MONEY: ' + m
+	}
+	else {
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: Not enough money!'
+	}
+}
+
 function moneyplus() {
 	element = document.getElementById('plus')
-	if (m >= 30) {
-		ms = ms + 1
-		m = m - 30
+	if (m >= 20) {
+		ms = ms + 1;
+		m = m - 20;
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
 		var elem1 = document.getElementById('score')
