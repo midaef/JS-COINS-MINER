@@ -14,28 +14,28 @@ window.onload = function () {
 		m = 0
 		document.cookie = 'm=' + m + ';'
 	} else {
-		m = cookiem
+		m = parseInt(cookiem)
 	}
 
 	if (cookiems == '') {
 		ms = 1
 		document.cookie = 'ms=' + ms + ';'
 	} else {
-		ms = cookiems
+		ms = parseInt(cookiems)
 	}
 
 	if (cookiesh1 == '') {
 		sh1 = 48
 		document.cookie = 'sh1=' + sh1 + ';'
 	} else {
-		sh1 = cookiesh1
+		sh1 = parseInt(cookiesh1)
 	}
 
 	if (cookiesh2 == '') {
 		sh2 = 52
 		document.cookie = 'sh2=' + sh2 + ';'
 	} else {
-		sh2 = cookiesh2
+		sh2 = parseInt(cookiesh2)
 	}
 }
 
