@@ -5,6 +5,40 @@ var m = 0
 	sh2 = 52
 
 
+window.onload = function () {
+	cookiem = document.cookie.replace(/(?:(?:^|.*;\s*)m\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookiems = document.cookie.replace(/(?:(?:^|.*;\s*)ms\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookiesh1 = document.cookie.replace(/(?:(?:^|.*;\s*)sh1\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookiesh2 = document.cookie.replace(/(?:(?:^|.*;\s*)sh2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	if (cookiem == '') {
+		m = 0
+		document.cookie = 'm=' + m + ';'
+	} else {
+		m = cookiem
+	}
+
+	if (cookiems == '') {
+		ms = 1
+		document.cookie = 'ms=' + ms + ';'
+	} else {
+		ms = cookiems
+	}
+
+	if (cookiesh1 == '') {
+		sh1 = 48
+		document.cookie = 'sh1=' + sh1 + ';'
+	} else {
+		sh1 = cookiesh1
+	}
+
+	if (cookiesh2 == '') {
+		sh2 = 52
+		document.cookie = 'sh2=' + sh2 + ';'
+	} else {
+		sh2 = cookiesh2
+	}
+}
+
 function showmenu() {
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
@@ -53,6 +87,9 @@ function shplus() {
 		sh1 = sh1 - 1;
 		sh2 = sh2 + 1;
 		m = m - 35;
+		document.cookie = 'sh1=' + sh1 + ';'
+		document.cookie = 'sh2=' + sh2 + ';'
+		document.cookie = 'm=' + m + ';'
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
 		var elem1 = document.getElementById('score')
@@ -69,6 +106,8 @@ function moneyplus1() {
 	if (m >= 55) {
 		ms = ms + 3;
 		m = m - 55;
+		document.cookie = 'm=' + m + ';'
+		document.cookie = 'ms=' + ms + ';'
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
 		var elem1 = document.getElementById('score')
@@ -87,6 +126,10 @@ function moneyplus2() {
 		m = m - 100;
 		sh1 = sh1 - 2;
 		sh2 = sh2 + 2;
+		document.cookie = 'm=' + m + ';'
+		document.cookie = 'ms=' + ms + ';'
+		document.cookie = 'sh1=' + sh1 + ';'
+		document.cookie = 'sh2=' + sh2 + ';'
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
 		var elem1 = document.getElementById('score')
@@ -103,6 +146,8 @@ function moneyplus() {
 	if (m >= 20) {
 		ms = ms + 1;
 		m = m - 20;
+		document.cookie = 'm=' + m + ';'
+		document.cookie = 'ms=' + ms + ';'
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
 		var elem1 = document.getElementById('score')
@@ -125,6 +170,7 @@ function show_money() {
 	else {
 		money3()
 		m = m + ms
+		document.cookie = 'm=' + m + ';'
 		var elem = document.getElementById('score')
 		
 		elem.innerHTML = 'MONEY: ' + m
