@@ -37,6 +37,8 @@ window.onload = function () {
 	} else {
 		sh2 = parseInt(cookiesh2)
 	}
+	var elem = document.getElementById('score')	
+	elem.innerHTML = 'MONEY: ' + m;
 }
 
 function showmenu() {
